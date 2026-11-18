@@ -1,0 +1,12 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><title>Admin portal | TalentTrack</title></head><body>
+<div class="gate" id="gate"><form class="panel" id="login"><h2 style="margin-bottom:16px">Recruiter sign in</h2><label>Username<input name="u" autocomplete="username" required></label><label>Password<input name="p" type="password" autocomplete="current-password" required></label><p id="err" style="color:var(--bad);margin:0 0 10px"></p><button class="btn" style="width:100%">Sign in</button><p class="hint" style="margin-top:12px">Demo login: admin / admin123</p></form></div>
+<header class="bar"><a class="logo" href="index.html">TalentTrack</a><nav><button class="tab on" data-t="people">Applicants</button><button class="tab" data-t="posts">Jobs</button><a href="candidate.html">Candidate portal</a></nav></header>
+<main class="wrap"><div class="stats" id="stats"></div>
+<section id="people"><div class="tools"><input id="q" type="search" placeholder="Search by name or email" aria-label="Search applicants"><select id="fj" aria-label="Filter by job"></select><select id="fs" aria-label="Filter by stage"></select></div>
+<div class="tbl"><table><thead><tr><th>Candidate</th><th>Job</th><th>Resume and phone</th><th>Applied</th><th>Stage</th></tr></thead><tbody id="rows"></tbody></table></div></section>
+<section id="posts" hidden><div class="split"><form class="panel" id="jobForm"><h3 style="margin-bottom:14px">Post a new job</h3>
+<label>Job title<input name="title" required></label><label>Department<input name="dept" required></label><label>Location<input name="loc" required></label>
+<label>Type<select name="type"><option>Full-time</option><option>Internship</option><option>Part-time</option><option>Contract</option></select></label><label>Required skills<input name="skills" placeholder="e.g. React, Git" required></label><button class="btn" style="width:100%">Post job</button></form>
+<div id="joblist"></div></div></section></main>
+<div id="toast" role="status"></div>
+<script src="data.js"></script><script src="admin.js"></script></body></html>
